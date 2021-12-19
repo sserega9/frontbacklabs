@@ -7,6 +7,7 @@
 |*Бурбело Сергій*|IV-91|https://t.me/sserega9|sburbelo3@gmail.com|
 
 
+# Navigation
 [Main page](https://github.com/sserega9/frontbacklabs/blob/main/index.php)
 - [Lab1](https://github.com/sserega9/frontbacklabs/blob/main/labs/lab1.php)
 - [Lab2](https://github.com/sserega9/frontbacklabs/blob/main/labs/lab2.php)
