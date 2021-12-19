@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lab5</title>
+
+	<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>	
+	<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>	
+
+	<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+	
+	<script type='text/javascript' src='unitegallery/themes/slider/ug-theme-slider.js'></script>
+	
+	<style>
+		body {
+			background: #39383F;
+			color: #fff;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		#gallery {
+			margin: 0 auto;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<br><br><h1>Video slider</h1><br><br>
+	
+	<div id="gallery" style="display:none;">
+
+		<img data-type="youtube"
+			 data-videoid="V0hagz_8L3M"
+			 data-title="Video 1"
+			 data-description="video 1">
+
+		<img data-type="youtube"
+			 data-videoid="fb1BF9B1MGQ"
+			 data-title="Video 2"
+			 data-description="video 2">
+		
+		<img data-type="youtube"
+			 data-videoid="IOEtNPfdN10"
+			 data-title="Video 3"
+			 data-description="video 3">
+	
+		<img data-type="youtube"
+			 data-videoid="q37YJca4ePk"
+			 data-title="Video 4"
+			 data-description="video 4">
+			 
+		<img data-type="youtube"
+			 data-videoid="ukv9TfG6Up0"
+			 data-title="Video 5"
+			 data-description="video 5">
+		
+	</div>
+	
+	<script type="text/javascript">
+
+		jQuery(document).ready(function(){
+
+			jQuery("#gallery").unitegallery();
+
+		});
+		
+	</script>
+
+	<br><br><h1>Код програми</h1>
+
+<xmp>
+<h1>Video slider</h1>
+
+<div id="gallery" style="display:none;">
+
+	<img data-type="youtube"
+		 data-videoid="V0hagz_8L3M"
+		 data-title="Video 1"
+		 data-description="video 1">
+
+	<img data-type="youtube"
+		 data-videoid="fb1BF9B1MGQ"
+		 data-title="Video 2"
+		 data-description="video 2">
+	
+	<img data-type="youtube"
+		 data-videoid="IOEtNPfdN10"
+		 data-title="Video 3"
+		 data-description="video 3">
+
+	<img data-type="youtube"
+		 data-videoid="q37YJca4ePk"
+		 data-title="Video 4"
+		 data-description="video 4">
+		 
+	<img data-type="youtube"
+		 data-videoid="ukv9TfG6Up0"
+		 data-title="Video 5"
+		 data-description="video 5">
+	
+</div>
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		jQuery("#gallery").unitegallery();
+
+	});
+	
+</script>
+</xmp>
+
+
+</body>
+</html>

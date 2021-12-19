@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lab5</title>
+
+	<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>	
+	<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>	
+
+	<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+	
+	<script type='text/javascript' src='unitegallery/themes/slider/ug-theme-slider.js'></script>
+	
+	<style>
+		body {
+			background: #39383F;
+			color: #fff;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		#gallery {
+			margin: 0 auto;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<br><br><h1>Photo slider</h1><br><br>
+
+	
+	<div id="gallery" style="display:none;">
+
+		<img alt="Preview Image 4"
+			 src="images/thumbs/img.jpg"
+			 data-image="images/big/img.jpg"
+			 data-description="Preview Image 4 Description">
+		
+		<img alt="Preview Image 5"
+			 src="images/thumbs/img5.jpeg"
+			 data-image="images/big/img5.jpeg"
+			 data-description="Preview Image 5 Description">
+	
+		<img alt="Preview Image 1"
+			 src="images/thumbs/img7.jpg"
+			 data-image="images/big/img7.jpg"
+			 data-description="Preview Image 1 Description">
+		
+		<img alt="Preview Image 2"
+			 src="images/thumbs/img6.jpg"
+			 data-image="images/big/img6.jpg"
+			 data-description="Preview Image 2 Description">
+			 
+		<img alt="Preview Image 3"
+			 src="images/thumbs/img7.jpg"
+			 data-image="images/big/img7.jpg"
+			 data-description="Preview Image 3 Description">
+		
+	</div>
+	
+	<script type="text/javascript">
+
+		jQuery(document).ready(function(){
+
+			jQuery("#gallery").unitegallery();
+
+		});
+		
+	</script>
+
+
+	<br>
+	<br>
+	<h1>Код програми</h1>
+
+<xmp>
+<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>	
+<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>	
+
+<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+
+<script type='text/javascript' src='unitegallery/themes/slider/ug-theme-slider.js'></script>
+
+<h2>Photo slider</h2>
+	
+<div id="gallery" style="display:none;">
+
+	<img alt="Preview Image 4"
+		 src="images/thumbs/img.jpg"
+		 data-image="images/big/img.jpg"
+		 data-description="Preview Image 4 Description">
+	
+	<img alt="Preview Image 5"
+		 src="images/thumbs/img5.jpeg"
+		 data-image="images/big/img5.jpeg"
+		 data-description="Preview Image 5 Description">
+
+	<img alt="Preview Image 1"
+		 src="images/thumbs/img7.jpg"
+		 data-image="images/big/img7.jpg"
+		 data-description="Preview Image 1 Description">
+	
+	<img alt="Preview Image 2"
+		 src="images/thumbs/img6.jpg"
+		 data-image="images/big/img6.jpg"
+		 data-description="Preview Image 2 Description">
+		 
+	<img alt="Preview Image 3"
+		 src="images/thumbs/img7.jpg"
+		 data-image="images/big/img7.jpg"
+		 data-description="Preview Image 3 Description">
+	
+</div>
+
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		jQuery("#gallery").unitegallery();
+
+	});
+	
+</script>
+
+</xmp>
+
+
+</body>
+</html>
