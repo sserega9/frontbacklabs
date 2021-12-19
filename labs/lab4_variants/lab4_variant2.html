@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+<head>
+<title>Variant 2</title>
+<style type="text/css">
+
+  body {
+    background: #39383F;
+    color: #fff;
+  }
+
+  #header {
+    text-align: center;
+  }
+
+  #left {
+    float: left;
+    width: 40%;
+    padding: 10px 40px;
+  }
+
+  #right {
+    float: left;
+    width: 40%;
+    padding: 10px 80px;
+  }
+
+  input {
+    width: 300px; 
+    height: 100%;
+  }
+
+  a.button {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+  } 
+  a.button:hover { background: rgba(255,255,255,.2); }
+  a.button:active { background: white; }
+
+  #task {
+    font-size: 20px;
+  }
+
+  .basik_input {
+    display: inline-block;
+    background: none;
+    color: white;
+    border: 2px solid;
+    padding: .45em 1em;
+    border-radius: 1px;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .basik_input::placeholder {
+    color: #E0E0E0;
+  }
+
+</style>
+
+<link rel="stylesheet" href="../../css/menu.css">
+
+</head>
+
+
+<body onload="menu();">
+
+  <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box" id="sidebar_list">
+        <!-- Тут будуть рядки меню -->
+      </ul>
+  </div>
+
+
+    <script type="text/javascript">
+
+      function menu() {
+
+        let title = ["Головна", "Повернутися до звіту лабораторної роботи №4", "Варіант 3", "Варіант 4"];
+
+        let links = ["../../index.html", "../lab4.html", "lab4_variant3.html", "lab4_variant4.html"]
+
+        let list = "";
+
+        for (var i = 0; i < title.length; i++) {
+
+          list += "<li><a class=menu__item href=" + links[i] + ">" + title[i] + "</a></li>";
+
+        }
+
+        document.getElementById("sidebar_list").innerHTML=list;
+
+      }
+      
+  </script>
+
+  <header id="header" class="header">
+    <h1 class="header__text">Варіант 2 - Виконав: Максим Каптур</h1>
+  </header>
+
+  <div id="left-right">
+    <div id="left">
+
+      <h1>Завдання 1</h1><br>
+
+      <input type="number" placeholder="Введіть довжину масиву" name="inputnumber" class="basik_input" id="input1">
+      <a class="button" onclick="variant2()">Почати</a><br><br>
+
+      <p id="error"><i>Введіть довжину масиву, щоб почати</i></p>
+
+      <p id="output"></p>
+
+      <p id="output2"></p>
+
+      <p id="output3"></p>
+
+      <p id="output4"></p>
+
+      <p id="output5"></p>
+
+      <p id="output6"></p>
+
+      <p id="output7"></p>
+
+      <p id="output8"></p>
+
+      <h1>Програмний код</h1><br>
+
+      <img src="img/lab4_var2_1.png" width="100%">
+      <img src="img/lab4_var2_2.png" width="100%">
+      <img src="img/lab4_var2_3.png" width="100%">
+
+
+      <script type="text/javascript">
+
+          function variant2() {
+
+            if (document.getElementById('input1').value == '' ) {
+
+              document.getElementById("error").innerHTML="Не коректне значення";
+              document.getElementById("output").innerHTML="";
+              document.getElementById("output2").innerHTML="";
+              document.getElementById("output3").innerHTML="";
+              document.getElementById("output4").innerHTML="";
+              document.getElementById("output5").innerHTML="";
+              document.getElementById("output6").innerHTML="";
+              document.getElementById("output7").innerHTML="";
+              document.getElementById("output8").innerHTML="";
+
+            } else {
+
+              document.getElementById("error").innerHTML= "";
+
+              let length = document.getElementById('input1').value;
+
+              let array = [];
+
+              for (var i = 0; i < length; i++) {
+                        
+                array.push(Math.floor(Math.random() * 20) - 6);
+
+              }   
+
+              document.getElementById("output").innerHTML="Масив = [" + array.join(", ") + "]";
+
+              let sum = 0;
+
+              let dob = 1;
+
+              let dodatny = [];
+
+              let neparni = [];
+
+              for (var i = 0; i < array.length; i++) {
+
+                // Сума елементів з парними індексами
+
+                if ( i%2 == 0) {
+
+                  sum += array[i];
+                }
+
+                // Не парні
+
+                if ( i%2 == 1) {
+
+                  neparni.push(array[i]);
+                }
+                
+                // Добуток від’ємних елементів
+
+                if(array[i] < 0) {
+
+                  dob *= array[i];
+                }
+
+                // Додатні
+
+                if(array[i] > 0) {
+
+                  dodatny.push(array[i]);
+                }
+
+              }
+
+              // Максимальний елемент та його індекс серед додатних чисел
+
+              var max = Math.max.apply(null, dodatny)
+
+              var max_index = array.indexOf(max);
+
+              // Мінімальний елемент та його індекс серед елементів з непарними індексами
+
+              var min = Math.min.apply(null, neparni)
+
+              var min_index = array.indexOf(min);
+
+              document.getElementById("output2").innerHTML="Сума елементів з парними індексами = " + sum;
+
+              document.getElementById("output3").innerHTML="Добуток від’ємних елементів = " + dob;
+
+              document.getElementById("output4").innerHTML="Максимальний елемент серед додатних чисел = " + max + ", його індекс = " + max_index;
+
+              document.getElementById("output5").innerHTML="Мінімальний елемент серед елементів з непарними індексам = " + min + ", його індекс = " + min_index;
+
+              document.getElementById("output6").innerHTML="Початковий масив = [" + array.join(", ") + "]";
+
+              document.getElementById("output7").innerHTML="Відсортований масив = [" + array.sort(function(a, b){return a - b}).join(", ") + "]";
+
+            }
+
+          }
+            
+
+        </script>
+
+   
+    </div>
+    <div id="right">
+
+      <h1>Завдання 2</h1>
+
+      <p>
+        <b>Динамічне меню</b><br><br>
+        Сформувати багаторівневе меню, пункти меню взяти із статичного масиву. При натисканні на визначений пункт меню має завантажуватися відповідна HTML-сторінка. Меню має бути присутнім на усіх сторінках.
+      </p>
+
+      <p><b>Результат:</b> Меню реалізоване в рамках всіх лабораторних робіт, а також було додане для навігації по варіантам лабораторної роботи №4</p>
+
+      <h1>Програмний код</h1><br>
+
+      <img src="img/lab4_var2_4.png" width="100%">
+
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

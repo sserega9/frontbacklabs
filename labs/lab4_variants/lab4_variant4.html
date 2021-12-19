@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<title>Variant 4</title>
+<style type="text/css">
+
+  body {
+    background: #39383F;
+    color: #fff;
+  }
+
+  #header {
+    text-align: center;
+  }
+
+  form {
+    color: black;
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(180,180,180,.8);
+    border: 1px solid rgba(155,155,155,.6);
+  }
+
+  .intLink { cursor: pointer; }
+
+  img.intLink { border: 0; margin-top: 5px; }
+
+  #toolBar1 {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  #toolBar2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  #toolBar1 select { 
+    font-size:15px; 
+    margin-top: 5px;
+    background-color: #fff;
+  }
+
+  #textBox {
+   /* width: 100%;*/
+    height: 200px;
+    border: 1px solid rgba(155,155,155,.6);
+    padding: 10px;
+    overflow: scroll;
+    background-color: #fff;
+  }
+
+  #textBox #sourceText {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+  }
+
+  #left {
+    float: left;
+    width: 40%;
+    padding: 10px 40px;
+  }
+
+  #right {
+    float: left;
+    width: 40%;
+    padding: 10px 80px;
+  }
+</style>
+<link rel="stylesheet" href="../../css/menu.css">
+
+</head>
+
+
+<body onload="initDoc();">
+
+  <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li><a class="menu__item" href="../../index.html">Головна</a></li>
+        <li><a class="menu__item" href="../lab4.html">Повернутися до звіту лабораторної роботи №4</a></li>
+        <li><a class="menu__item" href="lab4_variant2.html">Варіант 2</a></li>
+        <li><a class="menu__item" href="lab4_variant3.html">Варіант 3</a></li>
+      </ul>
+  </div>
+
+  <header id="header" class="header">
+    <h1 class="header__text">Варіант 4 - Виконав: Бурбело Сергій</h1>
+  </header>
+
+  <div id="left-right">
+    <div id="left">
+      <h1>Завдання 1</h1>
+      <script type="text/javascript">
+
+      function Table1() {
+
+        var A = [110, 1, 21, 3, 5, 4, 7, 8, 9, 10];
+        var B = [10, 2, 3, 4, 0, 6, 1, 23, 19, 10];
+        var C = [];
+
+        document.write("<b>Задані одновимірні масиви А, В з 10 чисел.</b><br><br>")
+        document.write("A = [" + A.join(', ') + " ]<br>");
+        document.write("B = [" + B.join(', ') + " ]<br><br>")
+        document.write("<b>Побудувати масив С, кожний елемент якого обчислюється за формулою: <br>a(i) != b(i) >> 1/(a(i)-b(i)) та a(i) = b(i) >> 1</b><br><br>")
+
+        for (var i = 0; i<A.length; i++) {
+          for (var i = 0; i<B.length; i++) {
+            if (A[i] == B[i]) {
+              C.push(1);
+            } else {
+              num = 1/(A[i]-B[i]);
+              C.push(Math.round(num * 100) / 100);
+            }
+          }
+        }
+
+        document.write("Масив C = [" + C.join(", ") + "] <br><br>");
+
+        document.write("<b>В масиві С поміняти максимальний елемент і перший. Вивести масиви до переставленняелементів та після.</b><br><br>") 
+        var first_max_C = C.slice(0);
+        var maxC = Math.max.apply(null, first_max_C)
+        var max_n = C.indexOf(maxC);
+        [first_max_C[0], first_max_C[max_n]] = [first_max_C[max_n], first_max_C[0]];
+
+        // document.write("Max = " + maxC + "<br>");
+        document.write("Наш вхідний масив: C = [" + C.join(", ") + "]<br>");
+        document.write("Модифікований масив C = [" + first_max_C.join(", ") + "] <br><br>");
+
+        var sort_C = C.slice(0);
+        sort_C = sortBubble(sort_C);
+
+        document.write("<b>Упорядкувати масив у порядку зростання методом бульбашки. Надрукувати вхідний та вихідний масив. Застосувати функції</b><br><br>")
+        document.write("Не сортований масив: C = [" + C.join(", ") + "]<br>");
+        document.write("Cортований масив: C.sort = [" + sort_C.join(", ") + "]<br>");
+
+        function sortBubble (arr) {
+          var tmp;
+          for(var i=0; i<arr.length-1; i++){
+            for(var j=0; j<arr.length-1; j++){
+              if(arr[j] > arr[j+1]){
+                tmp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=tmp;
+              }
+            }
+          }
+
+          return arr;
+        }
+
+      }
+        Table1();
+      </script>
+
+      <br>
+      <h3>Програмний код</h3>
+      <img src="img/lab4_var4_1.png" width="100%">
+
+    </div>
+    <div id="right">
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <h1>Завдання 2</h1>
+    <p>
+      <b>Текстовий редактор</b><br><br>
+      Реалізувати редактор, який би дозволяв виконувати форматування тексту, який уводиться. Обов‘язкові елементи форматування: напівжирність, нахил, підкреслювання, колір тексту, регістр символів. Елементи форматування мають бути доступними через відповідні кнопки, форматований текст – у окремому вікні на сторінці. 
+    </p>
+    <form name="compForm" method="post">
+        <input type="hidden" name="myDoc">
+        <div id="toolBar1">
+        <select onchange="formatDoc('fontname',this[this.selectedIndex].value);this.selectedIndex=0;">
+        <option class="heading" selected> Шрифт </option>
+        <option>Arial</option>
+        <option>Arial Black</option>
+        <option>Courier New</option>
+        <option>Times New Roman</option>
+        </select>
+        <select onchange="formatDoc('fontsize',this[this.selectedIndex].value);this.selectedIndex=0;">
+        <option class="heading" selected> Розмір </option>
+        <option value="1">Дуже малий</option>
+        <option value="2">Малий</option>
+        <option value="3">Нормальний</option>
+        <option value="4">Стандартний</option>
+        <option value="5">Великий</option>
+        <option value="6">Дуже великий</option>
+        <option value="7">Гігантський</option>
+        </select>
+        <select onchange="formatDoc('forecolor',this[this.selectedIndex].value);this.selectedIndex=0;">
+        <option class="heading" selected> Колір </option>
+        <option value="red">Червоний</option>
+        <option value="blue">Синій</option>
+        <option value="green">Зелений</option>
+        <option value="black">Чорний</option>
+        </select>
+        <select onchange="formatDoc('backcolor',this[this.selectedIndex].value);this.selectedIndex=0;">
+        <option class="heading" selected> Фон </option>
+        <option value="#faa">Червоний</option>
+        <option value="#afa">Зелений</option>
+        <option value="#aaf">Синій</option>
+        </select>
+        </div>
+        <div id="toolBar2">
+        <img class="intLink" title="Видалити всі зміни" onclick="formatDoc('removeFormat')" src="img/trash-2.svg">
+        <img class="intLink" title="Жирний" onclick="formatDoc('bold');" src="img/bold.svg">
+        <img class="intLink" title="Italic" onclick="formatDoc('italic');" src="img/italic.svg">
+        <img class="intLink" title="Підкреслення" onclick="formatDoc('underline');" src="img/underline.svg">
+        <img class="intLink" title="Вирівняти зліва" onclick="formatDoc('justifyleft');" src="img/align-left.svg">
+        <img class="intLink" title="Вирівняти по центру" onclick="formatDoc('justifycenter');" src="img/align-center.svg">
+        <img class="intLink" title="Вирівняти зправа" onclick="formatDoc('justifyright');" src="img/align-right.svg">
+        <img class="intLink" title="Нумерований список" onclick="formatDoc('insertorderedlist');" src="img/hash.svg">
+        <img class="intLink" title="Маркерний список" onclick="formatDoc('insertunorderedlist');" src="img/list.svg">
+
+        <!-- Текстове поле -->
+        </div>
+        <div id="textBox" contenteditable="true">
+
+        </div>
+
+    </form>
+
+    <br>
+    <h3>Програмний код</h3>
+    <img src="img/lab4_var4_2.png" width="100%">
+    <img src="img/lab4_var4_3.png" width="100%">
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var oDoc, sDefTxt;
+    function initDoc() {
+      oDoc = document.getElementById("textBox");
+      sDefTxt = oDoc.innerHTML;
+      if (document.compForm.switchBox.checked) { setDocMode(true); }
+    }
+    function formatDoc(sCmd, sValue) {
+      document.execCommand(sCmd, false, sValue); oDoc.focus();
+    }
+
+    feather.replace()
+
+  </script>
+</body>
+</html>
