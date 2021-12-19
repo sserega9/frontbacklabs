@@ -1,0 +1,328 @@
+* {
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	background: #39383F;
+  	font-family: 'Montserrat Alternates', sans-serif;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*---------------------------------- Header -------------------------------*/
+.header{
+	max-width: 100%;
+	text-align: center;
+	/*margin-left: 70px;*/
+}
+
+.header__text {
+	color: #fff;
+}
+
+/*---------------------------------- Content -------------------------------*/
+.content {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	min-height: 600px;
+}
+
+/*---------------------------------- Sidebar -------------------------------*/
+.sidebar {
+	width: 13%;
+	border: solid;
+	border-width: 1px;
+	border-color: #1e1a29;
+	/*background: #1e1a29;*/
+}
+
+.sidebar table {
+	width: 100%;
+}
+
+.sidebar table a {
+	color: #fff;
+}
+
+.sidebar table td{
+	border: solid;
+	border-width: 1px;
+	border-color: #1e1a29;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.sidebar table td:hover {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	background: #6a6185;
+}
+
+.sidebar_row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.left_50 {
+	margin-top: 50px;
+	width: 50%;
+}
+
+.right_50 {
+	width: 50%;
+	margin-top: 50px;
+}
+
+/*------------------------------------- Display -------------------------------*/
+
+.rows {
+	border: solid;
+	border-width: 1px;
+	border-color: #1e1a29;
+	padding: 20px;
+	text-align: left;
+	width: 87%;
+	display: flex;
+	color: #fff;
+	/*background: #fff;*/
+	/*background: #291f42;*/
+}
+
+/*-----------------------*/
+#row0 {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+#row0 img {
+	margin-top: 140px;
+}
+
+/*-----------------------*/
+#row1 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row2 {
+	width: 100%;
+	display: none;
+	margin: 0 auto;
+}
+
+/*-----------------------*/
+#row3 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row4 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row5 {
+	width: 100%;
+	display: none;
+	margin: 0 auto;
+}
+
+/*-----------------------*/
+#row6 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row7 {
+	width: 100%;
+	display: none;
+}
+
+#row8 {
+	width: 100%;
+	display: none;
+}
+
+/* ----- Акордеон ------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+.main {
+ font-family: Roboto, sans-serif;
+ font-size: 15px;
+ color: #777777;
+ line-height: 1.4;
+ width: 700px;
+}
+.main a {
+ font-weight: 400;
+ text-decoration: none;
+}
+.main h2 {
+ font-weight: 400;
+ color: #333333;
+ font-size: 28px;
+ text-transform: uppercase;
+}
+.main h5 {
+ font-size: 20px;
+ margin: 10px 0;
+}
+
+.main strong {
+ color: #0c9ec7;
+}
+
+.panel-heading {
+ margin-top: 5px;
+}
+
+.panel-heading a {
+ background: #333333;
+ color: #ffffff;
+ display: block;
+ padding: 10px 40px 10px 15px;
+ position: relative;
+ transition: 0.3s;
+}
+
+.panel-heading a:hover {
+ background: #0c5673;
+}
+
+.panel-heading a i {
+ font-size: 16px;
+ width: 30px;
+}
+.panel-heading a::after {
+ content: "\f107";
+ font-family: "FontAwesome";
+ position: absolute;
+ right: 15px;
+ transition: 0.3s;
+}
+.panel-heading.in a::after {
+ transform: rotate(180deg);
+}
+.panel-heading.in a {
+ background: #09afdf;
+}
+.panel-collapse {
+ display: none;
+ padding-bottom: 20px;
+}
+.wrapper-ul {
+ display: flex;
+ justify-content: space-around;
+}
+.wrapper-ul.df {
+ justify-content: flex-start;
+}
+.wrapper-ul ul {
+ margin-top: 5px;
+ padding-left: 20px;
+ list-style-type: none;
+}
+.wrapper-ul li {
+ position: relative;
+}
+.wrapper-ul li::before {
+ content: '\f105';
+ font-family: "FontAwesome";
+ position: absolute;
+ left: -13px;
+ top: 0;
+ color: #09afdf;
+ transition: 0.5s;
+}
+.wrapper-ul li a {
+ color: #09afdf;
+}
+.wrapper-ul li:first-child::before {
+ content: '';
+}
+.wrapper-ul li:first-child {
+ color: #333333;
+ font-weight: 500;
+}
+.wrapper-ul li a:hover {
+ color: #097ca6;
+}
+.wrapper-ul li:hover::before {
+ transform: translateX(4px);
+ color: #097ca6;
+}
+.button {
+ margin-top: 20px;
+}
+.button a {
+ background: #09afdf;
+ color: #ffffff;
+ padding: 8px 25px;
+ border-radius: 3px 3px 3px 3px;
+ border: 1px solid #0994c4;
+ transition: 0.3s;
+}
+.button a:hover {
+ background: #0994c4;
+}
+
+/* ------------------------------------  --------------------------------------- */
+
+.wrapper {
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#slider {
+	margin-bottom: 20px;
+}
+
+#val {
+	width: 150px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0;
+	text-indent: 10px;
+	margin: 0 auto;
+	display: block;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+.rowItem {
+	width: 75%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.rowItem .fa {
+  padding: 20px;
+  font-size: 30px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.rowItem .fa:hover {
+	color: grey;
+}

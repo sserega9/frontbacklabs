@@ -1,0 +1,359 @@
+/*---------------------------------- General -------------------------------*/
+* {
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	background: #39383F;
+  font-family: 'Montserrat Alternates', sans-serif;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*---------------------------------- Header -------------------------------*/
+.header{
+	max-width: 100%;
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+.header__text {
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+/*---------------------------------- Developers -------------------------------*/
+
+.post-wrap {
+   max-width: 1120px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.post-item {
+   padding: 15px;
+}
+.post-item * {
+   transition: .3s linear;
+}
+.item-content {
+   background: #413D4C;
+   padding: 40px;
+}
+.item-icon {
+   margin-bottom: 20px;
+}
+
+.item-icon img {
+	width: 100%;
+	height: 380px;
+}
+
+/*
+Animation
+.post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
+   transform: translateY(-8px);
+}*/
+
+.item-body {
+   color: #F5E2CD;
+   font-size: 14px;
+   /*text-align: left;*/
+}
+.item-body h3 {
+   font-weight: 500;
+   margin-bottom: 15px;
+   transition-delay: .05s;
+}
+.item-body p {
+   transition-delay: .1s;
+}
+
+.item-footer hr {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.post-item:hover .link span {
+   transform: translateX(0%);
+}
+.post-item:hover .link:before {
+   transform-origin: right center;
+}
+
+@media (min-width: 768px) {
+   .post-item {
+      flex-basis: 50%;
+      flex-shrink: 0;
+   }
+}
+@media (min-width: 960px) {
+   .post-item {
+      flex-basis: 33.333333333%;
+   }
+}
+
+
+/*----------------------------------------------------------------------------
+      Окно регистрации пользователя.
+----------------------------------------------------------------------------*/
+
+#register{
+   width: 450px;
+   height: 550px;
+   margin: 0 auto;
+   padding: 0 auto;
+   border: 2px solid #39383F;
+   border-radius: 10px;
+   background: #fff;
+   position: relative;
+   top: 50px;
+}
+
+#registration-header{
+   background: #39383F;
+    height: 65px;
+    width: 100%;
+}
+
+#registration-header #logo{
+   position: relative;
+   width: 100%;
+   height: 100%;
+   float: left;
+   max-height: 50px;
+   max-width: 50px;
+}
+
+#registration-header #logo img{
+   width: 100%;
+   position: absolute;
+   top: 6px;
+   left: 75px;
+}
+
+#registration-header #logo span{
+   font-size: 20px;
+   position: absolute;
+   top: 16px;
+   left: 130px;
+   color: white;
+}
+
+#registration-header #menu{
+   float: right;
+   margin-right: 250px;
+}
+
+#registration-header #menu a{
+   color: #fff;
+   float: left;
+   text-decoration: none;
+   font-size: 25px;
+   display: block;
+   padding: 17px 17px;
+}
+
+#registration-header #menu a:hover {
+   background: #39383F;
+   height: 30px;
+}
+
+#register #title h2{
+   font-size: 30px;
+   margin: 10px 0 0 30px;
+   color: grey;
+   widows: 200px;
+}
+
+#register #title h5{
+   font-size: 20px;
+   margin: 10px 0 15px 30px;
+   margin-left: 30px;
+   color: grey;
+}
+
+#register hr{
+   background: #0398ff;
+}
+
+
+#register #polya{
+   padding: 0 0 0 70px;
+}
+
+#register #polya p{
+   font-size: 20px;
+   color: grey;
+   padding: 0 0 10px 0;
+}
+
+#register #polya p input{
+   font-size: 30px;
+   width: 300px;
+   text-align: center;
+   margin: 5px 0 0 0 ;
+}
+
+#register #polya #politiks{
+   font-size: 15px;
+   margin: 0 70px 0 0;
+}
+
+#register #polya #btn{
+   margin: 10px 0 0 0;
+}
+
+#register #polya button{
+   font-size: 30px;
+   align-content: center;
+   background: #fff;
+   border: 2px solid #39383F;
+   margin: 0 0 0 0;
+   width: calc(100% - 70px);
+   height: 45px;
+   color: grey;
+}
+
+#register #polya button:hover{
+   background: #39383F;
+   color: #fff;
+}
+
+/*----------------------------------------------------------------------------
+      Окно авторизации пользователя.
+----------------------------------------------------------------------------*/
+
+#autorisation{
+   width: 450px;
+   height: 450px;
+   margin: 0 auto;
+   padding: 0 auto;
+   border: 2px solid #39383F;
+   border-radius: 10px;
+   background: #fff;
+   position: relative;
+   top: 50px;
+}
+
+#autorisation-header{
+   background: #39383F;
+    height: 65px;
+    width: 100%;
+}
+
+#autorisation-header #logo{
+   position: relative;
+   width: 100%;
+   height: 100%;
+   float: left;
+   max-height: 50px;
+   max-width: 50px;
+   left: calc(50% - 160px);
+}
+
+#autorisation-header #logo img{
+   width: 100%;
+   position: absolute;
+   top: 6px;
+   left: 75px;
+}
+
+#autorisation-header #logo span{
+   font-size: 30px;
+   position: absolute;
+   top: 16px;
+   left: 130px;
+   color: white;
+}
+
+#autorisation-header #menu{
+   float: right;
+   margin-right: 250px;
+}
+
+#autorisation-header #menu a{
+   color: #fff;
+   float: left;
+   text-decoration: none;
+   font-size: 25px;
+   display: block;
+   padding: 17px 17px;
+}
+
+#autorisation-header #menu a:hover {
+   background: #39383F;
+   height: 30px;
+}
+
+#autorisation #title h2{
+   font-size: 30px;
+   margin: 10px 0 0 30px;
+   color: grey;
+}
+
+#autorisation #title h5{
+   font-size: 20px;
+   margin: 10px 0 15px 30px;
+   margin-left: 30px;
+   color: grey;
+}
+
+#autorisation hr{
+   background: #0398ff;
+}
+
+
+#autorisation #polya{
+   padding: 0 0 0 70px;
+}
+
+#autorisation #polya p{
+   font-size: 20px;
+   color: grey;
+   padding: 0 0 10px 0;
+}
+
+#autorisation #polya p input{
+   font-size: 30px;
+   width: 300px;
+   text-align: center;
+   margin: 5px 0 15px 0 ;
+}
+
+#autorisation #polya #politiks{
+   font-size: 15px;
+   margin: 0 70px 0 0;
+}
+
+#autorisation #polya #btn{
+   margin: 10px 0 0 0;
+}
+
+#autorisation #polya button{
+   font-size: 30px;
+   align-content: center;
+   background: #fff;
+   border: 2px solid #39383F;
+   margin: 0 0 0 0;
+   width: calc(100% - 70px);
+   height: 45px;
+   color: grey;
+}
+
+#autorisation #polya button:hover{
+   background: #39383F;
+   color: #fff;
+}
+
+#first_pole {
+   margin-top: 20px;
+}

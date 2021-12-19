@@ -1,0 +1,252 @@
+* {
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	background: #39383F;
+  	font-family: 'Montserrat Alternates', sans-serif;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*---------------------------------- Header -------------------------------*/
+.header{
+	max-width: 100%;
+	text-align: center;
+	/*margin-left: 70px;*/
+}
+
+.header__text {
+	color: #fff;
+}
+
+/*---------------------------------- Content -------------------------------*/
+.content {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	height: 600px;
+}
+
+/*---------------------------------- Sidebar -------------------------------*/
+.sidebar {
+	width: 13%;
+	border: solid;
+	border-width: 1px;
+	border-color: #1e1a29;
+	/*background: #1e1a29;*/
+}
+
+.sidebar table {
+	width: 100%;
+}
+
+.sidebar table a {
+	color: #fff;
+}
+
+.sidebar table td{
+	border: solid;
+	border-width: 1px;
+	border-color: #1e1a29;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.sidebar table td:hover {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	background: #6a6185;
+}
+
+.sidebar_row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/*------------------------------------- Display -------------------------------*/
+
+.rows {
+	border: solid;
+	border-width: 1px;
+	border-color: #1e1a29;
+	padding: 20px;
+	text-align: left;
+	width: 87%;
+	display: flex;
+	color: #fff;
+	/*background: #fff;*/
+	/*background: #291f42;*/
+}
+
+/*-----------------------*/
+#row0 {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+#row0 img {
+	margin-top: 140px;
+}
+
+.left_50 {
+	margin-top: 50px;
+	width: 50%;
+}
+
+.right_50 {
+	width: 50%;
+	margin-top: 50px;
+}
+
+/*-----------------------*/
+#row1 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row2 {
+	width: 100%;
+	display: none;
+	margin: 0 auto;
+}
+
+#second_header {
+	margin-top: 50px;
+}
+
+.rectangle {
+	counter-reset: li; 
+	list-style: none; 
+	font: 14px "Trebuchet MS", "Lucida Sans";
+	padding: 0;
+	width: 300px;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.rectangle a {
+	position: relative;
+	display: block;
+	padding: .4em .4em .4em .8em;
+	margin: .5em 0 .5em 2.5em;
+	background: #D3D4DA;
+	color: #444;
+	text-decoration: none;
+	transition: all .3s ease-out;
+}
+.rectangle a:hover {background: #DCDDE1;}       
+.rectangle a:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -2.5em;
+	top: 50%;
+	margin-top: -1em;
+	background: #9097A2;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	text-align: center;
+	font-weight: bold;
+}
+.rectangle a:after {
+	position: absolute;
+	content: "";
+	border: .5em solid transparent;
+	left: -1em;
+	top: 50%;
+	margin-top: -.5em;
+	transition: all .3s ease-out;
+}
+.rectangle a:hover:after {
+	left: -.5em;
+	border-left-color: #9097A2;
+}
+
+
+.zebra {
+  list-style: none;
+  border-left: 10px solid grey;
+  padding: 0;
+  font-family: "Lucida Sans";
+  width: 300px;
+  color: black;
+}
+.zebra li {
+	color: #000000;
+	padding: 10px;
+}
+.zebra li:nth-child(odd) {
+	background: #E1F1FF;
+}
+.zebra li:nth-child(even) {
+	background: #DCDDE1;
+}
+
+
+/*-----------------------*/
+#row3 {
+	width: 100%;
+	display: none;
+}
+
+#row3 p {
+	font-size: 20px;
+}
+
+/*-----------------------*/
+#row4 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row5 {
+	width: 100%;
+	display: none;
+	margin: 0 auto;
+}
+
+#row5 img{
+ 	width: 300px;
+ 	height: 200px;
+}
+
+/*-----------------------*/
+#row6 {
+	width: 100%;
+	display: none;
+}
+
+
+/*-----------------------*/
+#row7 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row8 {
+	width: 100%;
+	display: none;
+}
+
+/*-----------------------*/
+#row9 {
+	width: 100%;
+	display: none;
+}
+
