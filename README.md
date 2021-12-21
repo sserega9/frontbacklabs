@@ -2,7 +2,7 @@
 
 
 # Authors
-|**Name**|**Group**|**Telegram**|**Email**|
+|**Name**|**Group**|**Telegram**|
 |-------------------|-------------------------------|-----------|
 |*Бурбело Сергій*|IV-91|https://t.me/sserega9|
 |*Карамшук Володимир*|IV-91|https://t.me/qazse97|
