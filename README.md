@@ -1,10 +1,12 @@
 # Front&Back Labs
 
 
-# Author
+# Authors
 |**Name**|**Group**|**Telegram**|**Email**|
-|-------------------|-------------------------------|-----------|-----------|
-|*Бурбело Сергій*|IV-91|https://t.me/sserega9|sburbelo3@gmail.com|
+|-------------------|-------------------------------|-----------|
+|*Бурбело Сергій*|IV-91|https://t.me/sserega9|
+|*Карамшук Володимир*|IV-91|https://t.me/qazse97|
+|*Каптур Максим*|IV-91|https://t.me/m_kaptur00|
 
 
 # Navigation
